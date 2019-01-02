@@ -8,11 +8,18 @@ import cats.instances.option._
   */
 class FunctorCompositionTest extends FunSuite with Matchers {
   
-  test("Composing functors is all about composing appropriate map functions") {
+  test("Cats: Composing functors is all about composing appropriate map functions") {
     def square(i: Int) = i * i
     val optionList = Option(List(1, 2, 3))
     
     Functor[Option].compose[List].map(optionList)(square) should be (Some(List(1, 4, 9)))
+  }
+
+  test("Pure Scala: Composing functors is all about composing appropriate map functions") {
+    def square(i: Int) = i * i
+    val optionList:Option[List[Int]] = Option(List(1, 2, 3))
+
+    optionList.map(_ . map(square)) should be (Some(List(1, 4, 9)))
   }
   
 }

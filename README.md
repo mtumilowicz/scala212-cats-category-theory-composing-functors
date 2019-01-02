@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mtumilowicz/scala212-cats-category-theory-composing-functors.svg?branch=master)](https://travis-ci.com/mtumilowicz/scala212-cats-category-theory-composing-functors)
+
 # scala212-cats-category-theory-composing-functors
 _Reference_: https://bartoszmilewski.com/2015/01/20/functors/  
 _Reference_: https://typelevel.org/cats/typeclasses/functor.html

@@ -14,10 +14,10 @@ We have `optionList:Option[List[Int]] = Option(List(1, 2, 3))`
 and we want to square the elements.
 * pure Scala
     ```
-     def square(i: Int) = i * i
-     val optionList:Option[List[Int]] = Option(List(1, 2, 3))
-    
-     optionList.map(_ . map(square)) should be (Some(List(1, 4, 9)))
+    def square(i: Int) = i * i
+    val optionList = Option(List(1, 2, 3))
+
+    optionList.map(_ . map(square)) should be (Some(List(1, 4, 9)))
     ```
 * Scala + Cats
     * Option is a functor

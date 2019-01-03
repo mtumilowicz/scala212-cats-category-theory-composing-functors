@@ -17,7 +17,7 @@ class FunctorCompositionTest extends FunSuite with Matchers {
 
   test("Pure Scala: Composing functors is all about composing appropriate map functions") {
     def square(i: Int) = i * i
-    val optionList:Option[List[Int]] = Option(List(1, 2, 3))
+    val optionList = Option(List(1, 2, 3))
 
     optionList.map(_ . map(square)) should be (Some(List(1, 4, 9)))
   }
